@@ -19,6 +19,10 @@ import com.publicapis.service.EntriesService;
 @RequestMapping("/publicapis")
 public class EntryController {
 	
+	/*
+	 PostMapping and GetMapping methods for the controller
+	 */
+	
 	@Autowired
 	private EntriesService entryService;
 	
@@ -30,7 +34,7 @@ public class EntryController {
 		return new ResponseEntity<Entries>(entry, HttpStatus.CREATED);
 	}
 	
-	@GetMapping("/getEntrie")
+	@GetMapping("/getEntries")
 	public ResponseEntity<List<Entries>> getAllEntries() {
 		
 		List<Entries> entries = entryService.getEntryAllEntries();
@@ -46,10 +50,10 @@ public class EntryController {
 		return new ResponseEntity<Entries>(entries, HttpStatus.OK);
 	}
 	
-	@GetMapping("/tilte/{tilte}")
-	public ResponseEntity<List<Entries>> getEntriesByTitle(@PathVariable(name = "tilte") String tilte) {
+	@GetMapping("/title/{title}")
+	public ResponseEntity<List<Entries>> getEntriesByTitle(@PathVariable(name = "title") String title) {
 		
-		List<Entries> entries = entryService.getEntryByTitle(tilte);
+		List<Entries> entries = entryService.getEntryByTitle(title);
 		
 		return new ResponseEntity<List<Entries>>(entries, HttpStatus.OK);
 	}

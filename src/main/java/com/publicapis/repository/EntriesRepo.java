@@ -10,7 +10,7 @@ import com.publicapis.model.Entries;
 @Repository
 public interface EntriesRepo extends JpaRepository<Entries, Integer>{
 	 
-	public List<Entries> findByTilte(String title);
+	public List<Entries> findByTitle(String title);
 	
 	public List<Entries> findByCategory(String category);
 }

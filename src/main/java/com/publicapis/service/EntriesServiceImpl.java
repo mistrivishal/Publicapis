@@ -33,7 +33,7 @@ public class EntriesServiceImpl implements EntriesService{
 	@Override
 	public List<Entries> getEntryByTitle(String title) {
 		
-		List<Entries> entries = eRepo.findByTilte(title);
+		List<Entries> entries = eRepo.findByTitle(title);
 		
 		return entries;
 	}
