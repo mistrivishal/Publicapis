@@ -1,5 +1,5 @@
 # Publicapis
-This application will create and entry with particular title, discerption and category and also persist it in to database;
+This application will create and entry with particular title, discerption and category and also persist it in to the database;
 
 # Installation & Run
 
